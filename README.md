@@ -35,3 +35,4 @@ It uses in-memory storage for quick prototyping and example handlers for:
 - Add JWT-based auth and middleware
 - Add persistence for users, lessons, results
 - Add tests
+# edu-platform
