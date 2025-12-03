@@ -4,47 +4,62 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
-	"github.com/yourname/edu-backend-starter/internal/database"
-	"github.com/yourname/edu-backend-starter/internal/models"
+	"edu-learning-platform/internal/database"
+	"edu-learning-platform/internal/models"
 )
 
-func ListAptitudeQuestions(c *gin.Context) {
+func ListAptitudeQuestions(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
-	rows, err := db.Query(
-		`SELECT id, category, question, options, correct_option, points, created_at
-		 FROM aptitude_questions ORDER BY id`,
-	)
+	rows, err := db.Query(`
+		SELECT id, category, question, options, correct_option, points, created_at
+		FROM aptitude_questions ORDER BY id
+	`)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+		http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 		return
 	}
 	defer rows.Close()
 
 	var list []models.AptitudeQuestion
+
 	for rows.Next() {
 		var q models.AptitudeQuestion
 		var optsRaw []byte
-		if err := rows.Scan(&q.ID, &q.Category, &q.Question, &optsRaw, &q.CorrectOption, &q.Points, &q.CreatedAt); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "scan error: " + err.Error()})
+
+		if err := rows.Scan(
+			&q.ID,
+			&q.Category,
+			&q.Question,
+			&optsRaw,
+			&q.CorrectOption,
+			&q.Points,
+			&q.CreatedAt,
+		); err != nil {
+			http.Error(w, `{"error":"scan error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
-		var opts []string
+
+		// Parse JSONB options
+		var options []string
 		if len(optsRaw) > 0 {
-			_ = json.Unmarshal(optsRaw, &opts)
+			_ = json.Unmarshal(optsRaw, &options)
 		}
-		q.Options = opts
-		// hide correctOption from client
+		q.Options = options
+
+		// Hide correct option
 		q.CorrectOption = -1
+
 		list = append(list, q)
 	}
 
-	c.JSON(http.StatusOK, list)
+	json.NewEncoder(w).Encode(list)
 }
 
 type AptitudeSubmitRequest struct {
@@ -52,25 +67,28 @@ type AptitudeSubmitRequest struct {
 	Answers map[int]int `json:"answers" binding:"required"` // question_id -> selectedOptionIndex
 }
 
-func SubmitAptitude(c *gin.Context) {
+func SubmitAptitude(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
 	var req AptitudeSubmitRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		http.Error(w, `{"error":"invalid request"}`, http.StatusBadRequest)
 		return
 	}
 
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
-	// Load all questions (for now – fine for small set)
-	rows, err := db.Query(
-		`SELECT id, category, correct_option, points FROM aptitude_questions`,
-	)
+	// Load ALL aptitude questions (fine for small dataset)
+	rows, err := db.Query(`
+		SELECT id, category, correct_option, points 
+		FROM aptitude_questions
+	`)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+		http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 		return
 	}
 	defer rows.Close()
@@ -85,8 +103,9 @@ func SubmitAptitude(c *gin.Context) {
 	for rows.Next() {
 		var id, correct, points int
 		var category string
+
 		if err := rows.Scan(&id, &category, &correct, &points); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "scan error: " + err.Error()})
+			http.Error(w, `{"error":"scan error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
 
@@ -94,12 +113,13 @@ func SubmitAptitude(c *gin.Context) {
 		if !ok {
 			continue
 		}
+
 		if selected == correct {
 			scores[category] += points
 		}
 	}
 
-	// Very simple recommendation
+	// Simple recommendation logic { TODO: Will be changed!! }
 	rec := "General"
 	if scores["math"] >= scores["science"] && scores["math"] >= scores["creativity"] {
 		rec = "Engineering"
@@ -110,19 +130,17 @@ func SubmitAptitude(c *gin.Context) {
 	}
 
 	var resultID int
-	err = db.QueryRow(
-		`INSERT INTO aptitude_results
-		 (user_id, math_score, science_score, creativity_score, memory_score, recommended_stream)
-		 VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
-		req.UserID,
-		scores["math"],
-		scores["science"],
-		scores["creativity"],
-		scores["memory"],
-		rec,
-	).Scan(&resultID)
+	err = db.QueryRow(`
+		INSERT INTO aptitude_results
+			(user_id, math_score, science_score, creativity_score, memory_score, recommended_stream)
+		VALUES
+			($1, $2, $3, $4, $5, $6)
+		RETURNING id
+	`, req.UserID, scores["math"], scores["science"], scores["creativity"], scores["memory"], rec).
+		Scan(&resultID)
+
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to save result: " + err.Error()})
+		http.Error(w, `{"error":"failed to save result: `+err.Error()+`"}`, http.StatusInternalServerError)
 		return
 	}
 
@@ -136,5 +154,7 @@ func SubmitAptitude(c *gin.Context) {
 		RecommendedStream: rec,
 	}
 
-	c.JSON(http.StatusOK, gin.H{"result": res})
+	json.NewEncoder(w).Encode(map[string]any{
+		"result": res,
+	})
 }

@@ -1,0 +1,208 @@
+1. User Types
+The system will support three types of users:
+
+    1.1 Students
+        - Class 1 to 12 students
+        - Access to subjects, lessons, quizzes, aptitude tests, progress, and rewards
+
+
+    1.2 Parents (optional future)
+        - Can view student progress
+
+
+    1.3 Admin
+        - Upload content (lessons, subjects, questions)
+        - Manage users
+        - Manage rewards and challenges
+
+
+2. User Module
+    2.1 Signup
+        - User can sign up with:
+            - Name
+            - Email (unique)
+            - Password
+            - Class (1–12)
+            
+        - Password stored as hashed value
+
+    2.2 Login
+        - User logs in using email + password
+        - On success, return JWT or session token
+
+    2.3 Profile
+        - Student can view/update:
+            - Name
+            - Class
+            - Avatar
+
+    2.4 Progress Tracking
+        - Track:
+            - Lessons completed
+            - Practice score
+            - Aptitude results
+            - Stream recommendations
+
+
+3. Subjects & Lessons
+    3.1 Subject Management
+        - Each class has subjects like:
+            - Math
+            - Science
+            - English
+            - Hindi
+            - Computer Basics
+            - Others
+
+    3.2 Lesson Structure
+        - Each lesson will contain:
+            - Title
+            - Theory (short, simple, engaging)
+            - Real-life examples (stored as JSON)
+            - Animations (Lottie or video links)
+            - Practice questions
+            - Summary notes
+
+    3.3 Lesson Navigation
+        - Student can browse lessons by:
+        - Class
+        - Subject
+        - Unit
+        - Difficulty
+
+
+4. Practice Questions
+    4.1 Question Format
+        - Each question includes:
+            - Question text
+            - Multiple-choice options (JSON)
+            - Correct option index
+            - Difficulty level
+
+    4.2 Practice Flow
+        - Student attempts practice questions for each lesson
+        - System calculates:
+            - Score
+            - Accuracy
+            - Weak topics
+
+    4.3 Solutions
+        - Display detailed explanation after answering
+
+
+5. Aptitude / Stream Selection System
+    5.1 Aptitude Categories
+        - Questions divided into:
+            - Math
+            - Science
+            - Memory
+            - Creativity
+
+    5.2 Aptitude Test Flow
+        - Student answers 20–40 questions
+        - Each question gives points
+        - System calculates:
+            - Math score
+            - Science score
+            - Creativity score
+            - Memory score
+
+    5.3 Stream Recommendation
+        - Based on scores:
+            - Engineering
+            - Medical
+            - Arts
+            - Commerce
+            - General foundational learning
+
+A result entry is stored in aptitude_results.
+
+6. Rewards & Gamification
+    6.1 Badges
+        - Awarded for:
+            - Completing lessons
+            - High accuracy
+            - Daily streak
+            - Finishing aptitude test
+
+    6.2 XP Points
+        - Earned for:
+            - Completing practice
+            - Finishing lessons
+            - Challenges
+
+    6.3 Leaderboards (future)
+        - Daily
+        - Weekly
+        - Class-based
+
+
+7. Challenges
+    7.1 Daily Challenges
+        - Short tasks (5–10 questions)
+
+    7.2 Weekly Challenges
+        - Mixed difficulty
+        - Rankings & rewards
+
+    7.3 Competition Mode
+        - Timed quizzes
+        - Instant scoring
+
+
+8. Animations and Interactive Learning
+    8.1 Animation Types
+        - Lottie animations
+        - Simple SVG animations
+        - Short explanation videos
+
+    8.2 Integration
+        - Each lesson can optionally embed animations
+        - Frontend will render them in a dedicated component
+
+
+9. Admin Panel
+    - Admins can:
+        - 9.1 Manage Users
+            - View/edit students
+            - Reset passwords
+
+        9.2 Manage Content
+            - Add/update subjects
+            - Add/update lessons
+            - Add/update practice questions
+            - Add/update aptitude questions
+
+        9.3 Publish Content
+            - Draft → Published workflow
+
+
+
+
+
+
+How All Requirements Fit Together:
+
+1. Learning Page
+
+- Short theory
+- Animation
+- Examples 
+- Practice problems
+
+2. Aptitude Test
+
+- Math
+- Science
+- Creativity
+- Memory
+
+3. Recommendation Engine
+
+- Suggest Engineering/Medical/Design/etc.
+
+4. Dashboard
+
+- Progress
+- Badges
+- Scores

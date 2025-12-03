@@ -2,11 +2,12 @@ package handlers
 
 import (
 	"database/sql"
+	"encoding/json"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
-	"github.com/yourname/edu-backend-starter/internal/database"
-	"github.com/yourname/edu-backend-starter/internal/models"
+	"edu-learning-platform/internal/database"
+	"edu-learning-platform/internal/models"
+
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -17,42 +18,47 @@ type signupRequest struct {
 	Class    int    `json:"class" binding:"required"`
 }
 
-func Signup(c *gin.Context) {
+func Signup(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
 	var req signupRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		http.Error(w, `{"error":"invalid request"}`, http.StatusBadRequest)
 		return
 	}
 
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
 	hash, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to hash password"})
+		http.Error(w, `{"error":"failed to hash password"}`, http.StatusInternalServerError)
 		return
 	}
 
 	var id int
-	err = db.QueryRow(
-		`INSERT INTO users (name, email, password_hash, class)
-		 VALUES ($1, $2, $3, $4) RETURNING id`,
-		req.Name, req.Email, string(hash), req.Class,
-	).Scan(&id)
+	err = db.QueryRow(`
+		INSERT INTO users (name, email, password_hash, class)
+		VALUES ($1, $2, $3, $4)
+		RETURNING id
+	`, req.Name, req.Email, string(hash), req.Class).Scan(&id)
+
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "could not create user: " + err.Error()})
+		http.Error(w, `{"error":"could not create user: `+err.Error()+`"}`, http.StatusBadRequest)
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{
+	resp := map[string]any{
 		"id":    id,
 		"name":  req.Name,
 		"email": req.Email,
 		"class": req.Class,
-	})
+	}
+
+	json.NewEncoder(w).Encode(resp)
 }
 
 type loginRequest struct {
@@ -60,46 +66,54 @@ type loginRequest struct {
 	Password string `json:"password" binding:"required"`
 }
 
-func Login(c *gin.Context) {
+func Login(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
 	var req loginRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		http.Error(w, `{"error":"invalid request"}`, http.StatusBadRequest)
 		return
 	}
 
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
 	var u models.User
-	err = db.QueryRow(
-		`SELECT id, name, email, password_hash, class, created_at
-		 FROM users WHERE email=$1`, req.Email,
-	).Scan(&u.ID, &u.Name, &u.Email, &u.PasswordHash, &u.Class, &u.CreatedAt)
+	err = db.QueryRow(`
+		SELECT id, name, email, password_hash, class, created_at
+		FROM users
+		WHERE email = $1
+	`, req.Email).Scan(
+		&u.ID, &u.Name, &u.Email, &u.PasswordHash, &u.Class, &u.CreatedAt,
+	)
 
 	if err == sql.ErrNoRows {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid credentials"})
+		http.Error(w, `{"error":"invalid credentials"}`, http.StatusUnauthorized)
 		return
 	}
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+		http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 		return
 	}
 
-	if err := bcrypt.CompareHashAndPassword([]byte(u.PasswordHash), []byte(req.Password)); err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid credentials"})
+	// Validate password
+	if bcrypt.CompareHashAndPassword([]byte(u.PasswordHash), []byte(req.Password)) != nil {
+		http.Error(w, `{"error":"invalid credentials"}`, http.StatusUnauthorized)
 		return
 	}
 
-	// For now no JWT, just return user basic data
-	c.JSON(http.StatusOK, gin.H{
-		"user": gin.H{
+	// Response
+	resp := map[string]any{
+		"user": map[string]any{
 			"id":    u.ID,
 			"name":  u.Name,
 			"email": u.Email,
 			"class": u.Class,
 		},
-	})
+	}
+
+	json.NewEncoder(w).Encode(resp)
 }

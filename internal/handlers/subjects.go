@@ -2,20 +2,22 @@ package handlers
 
 import (
 	"database/sql"
+	"encoding/json"
 	"net/http"
 	"strconv"
 
-	"github.com/gin-gonic/gin"
-	"github.com/yourname/edu-backend-starter/internal/database"
-	"github.com/yourname/edu-backend-starter/internal/models"
+	"edu-learning-platform/internal/database"
+	"edu-learning-platform/internal/models"
 )
 
-func ListSubjects(c *gin.Context) {
-	classStr := c.Query("class")
+func ListSubjects(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	classStr := r.URL.Query().Get("class")
 
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
@@ -24,37 +26,48 @@ func ListSubjects(c *gin.Context) {
 	if classStr != "" {
 		class, err := strconv.Atoi(classStr)
 		if err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid class"})
+			http.Error(w, `{"error":"invalid class"}`, http.StatusBadRequest)
 			return
 		}
-		rows, err = db.Query(
-			`SELECT id, name, class, created_at FROM subjects WHERE class=$1 ORDER BY name`,
-			class,
-		)
+
+		rows, err = db.Query(`
+			SELECT id, name, class, created_at 
+			FROM subjects 
+			WHERE class = $1 
+			ORDER BY name
+		`, class)
+
 		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+			http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
+
 	} else {
-		rows, err = db.Query(
-			`SELECT id, name, class, created_at FROM subjects ORDER BY class, name`,
-		)
+		rows, err = db.Query(`
+			SELECT id, name, class, created_at 
+			FROM subjects 
+			ORDER BY class, name
+		`)
 		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+			http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
 	}
+
 	defer rows.Close()
 
 	var subjects []models.Subject
+
 	for rows.Next() {
 		var s models.Subject
 		if err := rows.Scan(&s.ID, &s.Name, &s.Class, &s.CreatedAt); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "scan error: " + err.Error()})
+			http.Error(w, `{"error":"scan error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
 		subjects = append(subjects, s)
 	}
 
-	c.JSON(http.StatusOK, subjects)
+	if err := json.NewEncoder(w).Encode(subjects); err != nil {
+		http.Error(w, `{"error":"encoding error"}`, http.StatusInternalServerError)
+	}
 }

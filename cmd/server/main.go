@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 
-	"github.com/gin-gonic/gin"
-	"github.com/yourname/edu-backend-starter/internal/database"
-	"github.com/yourname/edu-backend-starter/internal/routes"
+	"edu-learning-platform/internal/database"
+	"edu-learning-platform/internal/routes"
+
+	"github.com/go-chi/chi/v5"
 )
 
 func main() {
@@ -25,28 +27,15 @@ func main() {
 		port = "8080"
 	}
 
-	// 3. Gin setup
-	r := gin.Default()
+	// 3. Chi Router setup (NO CORS)
+	r := chi.NewRouter()
 
-	// --- CORS Middleware ---
-	r.Use(func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
-		c.Writer.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
-
-		if c.Request.Method == "OPTIONS" {
-			c.AbortWithStatus(204)
-			return
-		}
-
-		c.Next()
-	})
-	// ------------------------
-
+	// Register all API routes
 	routes.RegisterRoutes(r)
 
 	log.Println("Starting server on port", port)
-	if err := r.Run(":" + port); err != nil {
-		log.Fatalf("failed to run server: %v", err)
+	err = http.ListenAndServe(":"+port, r)
+	if err != nil {
+		log.Fatalf("failed to start server: %v", err)
 	}
 }

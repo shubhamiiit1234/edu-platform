@@ -5,57 +5,76 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/gin-gonic/gin"
-	"github.com/yourname/edu-backend-starter/internal/database"
-	"github.com/yourname/edu-backend-starter/internal/models"
+	"edu-learning-platform/internal/database"
+	"edu-learning-platform/internal/models"
 )
 
-func ListPracticeQuestions(c *gin.Context) {
-	lessonStr := c.Query("lesson_id")
+func ListPracticeQuestions(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	lessonStr := r.URL.Query().Get("lesson_id")
 	if lessonStr == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "lesson_id is required"})
+		http.Error(w, `{"error":"lesson_id is required"}`, http.StatusBadRequest)
 		return
 	}
+
 	lessonID, err := strconv.Atoi(lessonStr)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid lesson_id"})
+		http.Error(w, `{"error":"invalid lesson_id"}`, http.StatusBadRequest)
 		return
 	}
 
 	db, err := database.GetDBInstance()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db not initialized"})
+		http.Error(w, `{"error":"db not initialized"}`, http.StatusInternalServerError)
 		return
 	}
 
-	rows, err := db.Query(
-		`SELECT id, lesson_id, question, options, correct_option, difficulty, created_at
-		 FROM practice_questions WHERE lesson_id=$1 ORDER BY id`,
-		lessonID,
-	)
+	rows, err := db.Query(`
+		SELECT id, lesson_id, question, options, correct_option, difficulty, created_at
+		FROM practice_questions
+		WHERE lesson_id = $1
+		ORDER BY id
+	`, lessonID)
+
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "db error: " + err.Error()})
+		http.Error(w, `{"error":"db error: `+err.Error()+`"}`, http.StatusInternalServerError)
 		return
 	}
 	defer rows.Close()
 
 	var qs []models.PracticeQuestion
+
 	for rows.Next() {
 		var q models.PracticeQuestion
 		var optionsRaw []byte
-		if err := rows.Scan(&q.ID, &q.LessonID, &q.Question, &optionsRaw, &q.CorrectIndex, &q.Difficulty, &q.CreatedAt); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "scan error: " + err.Error()})
+
+		if err := rows.Scan(
+			&q.ID,
+			&q.LessonID,
+			&q.Question,
+			&optionsRaw,
+			&q.CorrectIndex,
+			&q.Difficulty,
+			&q.CreatedAt,
+		); err != nil {
+			http.Error(w, `{"error":"scan error: `+err.Error()+`"}`, http.StatusInternalServerError)
 			return
 		}
-		var opts []string
-		if len(optionsRaw) > 0 {
-			_ = json.Unmarshal(optionsRaw, &opts)
-		}
-		q.Options = opts
 
-		// Do NOT send correctIndex to client normally; here we send it for now for testing
+		// Parse JSON options
+		var options []string
+		if len(optionsRaw) > 0 {
+			_ = json.Unmarshal(optionsRaw, &options)
+		}
+		q.Options = options
+
+		// 🚨 IMPORTANT:
+		// Normally we should NOT send correct index to clients
+		// but you kept it for testing, so I leave it as is.
+
 		qs = append(qs, q)
 	}
 
-	c.JSON(http.StatusOK, qs)
+	json.NewEncoder(w).Encode(qs)
 }
