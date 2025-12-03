@@ -1,3 +1,5 @@
+Functional Requirements:
+
 1. User Types
 The system will support three types of users:
 
