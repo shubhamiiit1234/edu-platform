@@ -163,7 +163,7 @@ A result entry is stored in aptitude_results.
 
 9. Admin Panel
     - Admins can:
-        - 9.1 Manage Users
+        9.1 Manage Users
             - View/edit students
             - Reset passwords
 
