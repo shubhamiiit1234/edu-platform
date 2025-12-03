@@ -1,3 +1,13 @@
+Idea:
+
+✔ Subjects
+✔ Lessons
+✔ Theory (short, engaging, non-boring)
+✔ Real-life examples (JSONB-ready)
+✔ Animations (Lottie / video links)
+✔ Summary
+✔ Practice questions (MCQs)
+
 Functional Requirements:
 
 1. User Types
