@@ -1,0 +1,350 @@
+[
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 1,
+    "lesson_title": "The Sentence: Types and Components",
+    "theory_short": "A **sentence** is a group of words that makes complete sense. Every sentence has two main parts: a **Subject** (who or what the sentence is about) and a **Predicate** (what the subject does or is). Sentences can be: **Assertive/Declarative** (statements), **Interrogative** (questions), **Imperative** (commands/requests), or **Exclamatory** (strong feeling).",
+    "summary": "Sentences must convey complete meaning and contain a subject and predicate. There are four types of sentences: declarative, interrogative, imperative, and exclamatory.",
+    "animations_links": [
+      "www.youtube.com"
+    ],
+    "real_life_examples": {
+      "sentence_types": [
+        "**Assertive:** The dog ran quickly.",
+        "**Interrogative:** Did the dog run quickly?",
+        "**Imperative:** Run quickly, dog!",
+        "**Exclamatory:** How quickly that dog ran!",
+        "**Subject/Predicate:** [The tall boy] [kicked the ball]."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Which type of sentence asks a question?",
+        "options": ["Declarative", "Imperative", "Exclamatory", "Interrogative"],
+        "answer": "Interrogative"
+      },
+      {
+        "question": "Identify the subject in the sentence: 'My older sister plays the violin well.'",
+        "options": ["plays the violin well", "My older sister", "violin", "well"],
+        "answer": "My older sister"
+      },
+      {
+        "question": "What punctuation mark usually ends an imperative sentence?",
+        "options": ["?", "!", ".", ","],
+        "answer": "."
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 2,
+    "lesson_title": "Nouns: Kinds and Cases",
+    "theory_short": "**Nouns** are naming words: they name people, places, animals, or things. Main kinds: **Common** (general names), **Proper** (specific, capitalized), **Collective** (groups), **Abstract** (ideas/feelings), and **Material** (substances). Nouns can be singular or plural.",
+    "summary": "Nouns name entities and are categorized into common, proper, collective, abstract, and material nouns. Proper nouns are always capitalized.",
+    "animations_links": [],
+    "real_life_examples": {
+      "noun_types": [
+        "**Common:** table, boy, ocean",
+        "**Proper:** The Eiffel Tower, Rohit, Pacific Ocean",
+        "**Collective:** A *bouquet* of flowers; a *class* of students",
+        "**Abstract:** Love, honesty, time",
+        "**Material:** Wood, silver, cotton"
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Which of these is a Proper Noun?",
+        "options": ["continent", "mountain", "Asia", "river"],
+        "answer": "Asia"
+      },
+      {
+        "question": "Identify the Collective Noun in the sentence: 'The jury delivered its verdict.'",
+        "options": ["jury", "verdict", "its", "delivered"],
+        "answer": "jury"
+      },
+      {
+        "question": "The word 'sadness' is an example of which type of noun?",
+        "options": ["Common", "Material", "Abstract", "Proper"],
+        "answer": "Abstract"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 3,
+    "lesson_title": "Pronouns: Replacing Nouns",
+    "theory_short": "**Pronouns** replace nouns to avoid repetition. Types include: **Personal** (I, you, he, she, we, they), **Possessive** (mine, yours, his, ours), **Reflexive** (myself, yourself), and **Demonstrative** (this, that, these, those).",
+    "summary": "Pronouns are substitution words for nouns, categorized by function (personal, possessive, reflexive, demonstrative) to ensure varied and flowing language.",
+    "animations_links": [],
+    "real_life_examples": {
+      "pronouns_in_use": [
+        "Instead of 'Maya went to the store', use 'She went to the store.'",
+        "'This book is mine' (mine = possessive pronoun).",
+        "'He taught himself how to cook' (himself = reflexive pronoun).",
+        "'That is my favorite movie' (that = demonstrative pronoun)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Which pronoun should replace the underlined words: '<u>My friends and I</u> are going to the park.'",
+        "options": ["They", "We", "You", "He"],
+        "answer": "We"
+      },
+      {
+        "question": "Which of these is a reflexive pronoun?",
+        "options": ["Ours", "Them", "Myself", "Who"],
+        "answer": "Myself"
+      },
+      {
+        "question": "Identify the possessive pronoun: 'Is this pen yours or mine?'",
+        "options": ["Is", "this", "yours", "pen"],
+        "answer": "yours"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 4,
+    "lesson_title": "Adjectives: Describing Words",
+    "theory_short": "**Adjectives** describe or modify nouns and pronouns, providing more information about their quality, quantity, size, or number. They answer questions like 'What kind?', 'How many?', or 'Which one?'. They often change form to show **degrees of comparison**: positive (big), comparative (bigger), and superlative (biggest).",
+    "summary": "Adjectives are descriptive words that modify nouns/pronouns and have degrees of comparison (positive, comparative, superlative).",
+    "animations_links": [],
+    "real_life_examples": {
+      "adjectives_in_use": [
+        "A *beautiful* flower (*What kind?*).",
+        "There are *five* apples (*How many?*).",
+        "'The blue car is faster than the red car.' (Faster = comparative degree).",
+        "'She is the smartest student in the class.' (Smartest = superlative degree)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Identify the adjective in the sentence: 'The heavy box fell with a loud thud.'",
+        "options": ["box", "fell", "heavy", "thud"],
+        "answer": "heavy"
+      },
+      {
+        "question": "What is the comparative degree of the adjective 'good'?",
+        "options": ["gooder", "best", "better", "well"],
+        "answer": "better"
+      },
+      {
+        "question": "Which word is a descriptive adjective?",
+        "options": ["Seven", "This", "Tall", "He"],
+        "answer": "Tall"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 5,
+    "lesson_title": "Verbs: Action and Being",
+    "theory_short": "**Verbs** are the powerhouse of the sentence; they express action, occurrence, or a state of being. Main verbs show the primary action (run, eat, think), while **helping/auxiliary verbs** (am, is, are, was, were, has, have, had) assist the main verb, often indicating tense. The form of the verb changes depending on the subject (subject-verb agreement) and when the action happened (tense).",
+    "summary": "Verbs express action or state of being and work with auxiliary verbs. They must agree with the subject and indicate the correct tense.",
+    "animations_links": [
+      "www.youtube.com"
+    ],
+    "real_life_examples": {
+      "verbs_in_use": [
+        "She *sings* beautifully (action verb).",
+        "The cat *is* asleep (state of being/helping verb).",
+        "'They *have finished* their homework.' (*have* finished = main and helping verbs).",
+        "He *walks* to school every day (present tense, subject-verb agreement)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Identify the verb in the sentence: 'The children played in the garden.'",
+        "options": ["children", "played", "garden", "the"],
+        "answer": "played"
+      },
+      {
+        "question": "Which of these words is a helping/auxiliary verb?",
+        "options": ["run", "jump", "write", "is"],
+        "answer": "is"
+      },
+      {
+        "question": "Choose the correct verb: 'She _____ her breakfast every morning.'",
+        "options": ["eats", "eat", "eating", "are eating"],
+        "answer": "eats"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 6,
+    "lesson_title": "Adverbs: Modifying Verbs and More",
+    "theory_short": "**Adverbs** modify verbs, adjectives, or even other adverbs. They provide details by answering *How?* (manner), *When?* (time), *Where?* (place), or *How often?* (frequency) an action takes place. Many adverbs end in '-ly' (quickly, carefully). They add precision and detail to our sentences.",
+    "summary": "Adverbs modify verbs, adjectives, or other adverbs, answering questions like How, When, Where, or How often.",
+    "animations_links": [],
+    "real_life_examples": {
+      "adverbs_in_use": [
+        "He speaks *softly* (How?).",
+        "She arrived *yesterday* (When?).",
+        "The dog is playing *outside* (Where?).",
+        "I *always* brush my teeth (How often?)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Identify the adverb in the sentence: 'He drives his car very carefully.'",
+        "options": ["drives", "car", "very", "carefully"],
+        "answer": "carefully"
+      },
+      {
+        "question": "Which question does the adverb in 'She will come soon' answer?",
+        "options": ["How?", "When?", "Where?", "How often?"],
+        "answer": "When?"
+      },
+      {
+        "question": "Which of these words is an adverb?",
+        "options": ["Beautiful", "Beauty", "Beautifully", "Beautify"],
+        "answer": "Beautifully"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 7,
+    "lesson_title": "Tenses: Time of Action",
+    "theory_short": "**Tenses** tell us when an action happens: in the **present** (happening now), the **past** (already happened), or the **future** (will happen later). We focus on simple tenses at this level: Simple Present (I walk), Simple Past (I walked), and Simple Future (I will walk). Correct tense usage is crucial for clear communication.",
+    "summary": "Tenses indicate the time of action (past, present, or future) using specific verb forms like Simple Present, Simple Past, and Simple Future.",
+    "animations_links": [],
+    "real_life_examples": {
+      "tenses_in_use": [
+        "**Present:** Birds *fly* in the sky.",
+        "**Past:** I *visited* my grandparents last week.",
+        "**Future:** We *will go* to the beach tomorrow.",
+        "Simple Present is also used for facts: 'The Sun *rises* in the East.'"
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Which tense is used in the sentence: 'They played football yesterday'?",
+        "options": ["Simple Present", "Simple Future", "Simple Past", "Present Continuous"],
+        "answer": "Simple Past"
+      },
+      {
+        "question": "Fill in the blank with the correct future tense verb: 'She _____ her exams next month.'",
+        "options": ["passes", "passed", "will pass", "is passing"],
+        "answer": "will pass"
+      },
+      {
+        "question": "Which sentence is in the simple present tense?",
+        "options": ["He is running.", "He ran yesterday.", "He runs every day.", "He will run later."],
+        "answer": "He runs every day."
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 8,
+    "lesson_title": "Prepositions: Position and Direction",
+    "theory_short": "**Prepositions** are small words that show the relationship between a noun/pronoun and other words in a sentence, often indicating **position** (in, on, under, above) or **direction** (to, from, towards, into). They can also indicate time (at, in, on, before). They help locate things precisely.",
+    "summary": "Prepositions are linking words that indicate relationships of time, place, or direction between nouns/pronouns and other sentence elements.",
+    "animations_links": [
+      "www.youtube.com"
+    ],
+    "real_life_examples": {
+      "prepositions_in_use": [
+        "The cat is *under* the table (place).",
+        "We eat lunch *at* noon (time).",
+        "He walked *towards* the school (direction).",
+        "She put the books *in* her bag (place/direction)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Fill in the blank: 'The bird is sitting _____ the branch.'",
+        "options": ["at", "on", "in", "to"],
+        "answer": "on"
+      },
+      {
+        "question": "Which word in the sentence 'He jumped into the pool' is a preposition?",
+        "options": ["He", "jumped", "into", "pool"],
+        "answer": "into"
+      },
+      {
+        "question": "Which preposition indicates a specific time?",
+        "options": ["In the morning", "On Monday", "At 5 o'clock", "Under the table"],
+        "answer": "At 5 o'clock"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 9,
+    "lesson_title": "Conjunctions: Joining Words",
+    "theory_short": "**Conjunctions** are connecting words that link words, phrases, or entire clauses together. Common examples (FANBOYS): **For, And, Nor, But, Or, Yet, So**. They help create complex and flowing sentences rather than short, choppy ones. Using them correctly shows the relationship between different ideas.",
+    "summary": "Conjunctions connect grammatical elements (words, phrases, clauses) and indicate the relationship between connected ideas.",
+    "animations_links": [],
+    "real_life_examples": {
+      "conjunctions_in_use": [
+        "I like apples *and* bananas (joining words).",
+        "We can go to the park *or* stay home (joining phrases).",
+        "It was raining, *so* we carried an umbrella (joining clauses, showing cause/effect).",
+        "She wanted to go, *but* she was sick (joining clauses, showing contrast)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Which conjunction should fill the blank: 'I was hungry, _____ I ate a sandwich.'",
+        "options": ["but", "or", "so", "and"],
+        "answer": "so"
+      },
+      {
+        "question": "Which of these words is a conjunction?",
+        "options": ["Because", "Quickly", "Jumped", "Under"],
+        "answer": "Because"
+      },
+      {
+        "question": "Which conjunction is used to show contrast or opposition?",
+        "options": ["And", "So", "Or", "But"],
+        "answer": "But"
+      }
+    ]
+  },
+  {
+    "subject": "English Grammar",
+    "class_level": 6,
+    "chapter_number": 10,
+    "lesson_title": "Articles: A, An, The",
+    "theory_short": "**Articles** are a type of determiner used before nouns. **'A'** and **'An'** are **indefinite articles**, used for general or non-specific singular nouns. Use 'an' before words starting with a vowel sound (an apple, an hour). Use 'a' otherwise (a cat, a university—'you' sound). **'The'** is the **definite article**, used for specific or already mentioned nouns (the book I am reading).",
+    "summary": "Articles 'a', 'an' (indefinite) and 'the' (definite) precede nouns. Use 'an' before vowel sounds, 'a' before consonant sounds, and 'the' for specific items.",
+    "animations_links": [],
+    "real_life_examples": {
+      "articles_in_use": [
+        "I need *a* pen (any pen).",
+        "I need *the* blue pen on the table (specific pen).",
+        "*An* elephant is big (*an* before vowel sound).",
+        "*A* uniform is required (*a* before consonant 'you' sound)."
+      ]
+    },
+    "practice_questions_mcqs": [
+      {
+        "question": "Fill in the blank: 'She ate _____ egg for breakfast.'",
+        "options": ["a", "an", "the", "no article"],
+        "answer": "an"
+      },
+      {
+        "question": "Which article is used when referring to a specific item?",
+        "options": ["A", "An", "The", "Any"],
+        "answer": "The"
+      },
+      {
+        "question": "Fill in the blank: 'It takes almost _____ hour to get there.'",
+        "options": ["a", "an", "the", "two"],
+        "answer": "an"
+      }
+    ]
+  }
+]

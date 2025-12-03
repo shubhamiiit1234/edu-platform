@@ -1,0 +1,790 @@
+[
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 1,
+        "lesson_title": "Food: Where Does It Come From?",
+        "theory_short": "Our daily meals have diverse ingredients like rice, water, vegetables, salt, etc. But where do these ingredients originate? They primarily come from plants (fruits, veggies, grains) or animals (milk, eggs, meat). Understanding these sources helps us appreciate our food. Animals have different eating habits: herbivores eat plants, carnivores eat other animals, and omnivores eat both plants and animals.",
+        "summary": "Food ingredients come from plants (grains, vegetables) and animals (milk, meat). Animals are classified as herbivores, carnivores, or omnivores based on their diet.",
+        "animations_links": [
+            ""
+        ],
+        "real_life_examples": {
+            "sources": [
+                "Spinach from plants (herbivores food source).",
+                "Milk from cows/buffaloes (animal product).",
+                "A lion hunting prey (carnivore diet).",
+                "Humans eating chicken and vegetables (omnivore diet)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these is a herbivore?",
+                "options": [
+                    "Lion",
+                    "Deer",
+                    "Human",
+                    "Tiger"
+                ],
+                "answer": "Deer"
+            },
+            {
+                "question": "Which part of a plant is ginger?",
+                "options": [
+                    "Root",
+                    "Stem",
+                    "Leaf",
+                    "Flower"
+                ],
+                "answer": "Stem"
+            },
+            {
+                "question": "Which food item is not an animal product?",
+                "options": [
+                    "Eggs",
+                    "Honey",
+                    "Rice",
+                    "Milk"
+                ],
+                "answer": "Rice"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 2,
+        "lesson_title": "Components of Food",
+        "theory_short": "Food isn't just one thing! It has essential components called **nutrients** that our bodies need. These include carbohydrates (energy givers), proteins (body builders), fats (more energy), vitamins (protection), and minerals (for overall health). We also need water and roughage (fibre). A diet with the right amounts of all nutrients is a **balanced diet**. Lack of nutrients can cause deficiency diseases.",
+        "summary": "Nutrients (carbohydrates, proteins, fats, vitamins, minerals) are vital for growth and health. A balanced diet prevents deficiency diseases.",
+        "animations_links": [""],
+        "real_life_examples": {
+            "foods_and_nutrients": [
+                "Rice or potato for carbohydrates (energy).",
+                "Pulses, eggs, or fish for proteins (growth and repair).",
+                "Butter or oil for fats (stored energy).",
+                "Eating fresh fruits and vegetables to get vitamins and minerals (protection from diseases).",
+                "Using iodine solution to test for starch in a potato (lab activity example)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which nutrient helps in the growth and repair of our body?",
+                "options": [
+                    "Carbohydrates",
+                    "Fats",
+                    "Proteins",
+                    "Vitamins"
+                ],
+                "answer": "Proteins"
+            },
+            {
+                "question": "Deficiency of Vitamin C causes which disease?",
+                "options": [
+                    "Rickets",
+                    "Beri-beri",
+                    "Scurvy",
+                    "Night blindness"
+                ],
+                "answer": "Scurvy"
+            },
+            {
+                "question": "Which of these is a rich source of fat?",
+                "options": [
+                    "Orange",
+                    "Lentils",
+                    "Ghee",
+                    "Spinach"
+                ],
+                "answer": "Ghee"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 3,
+        "lesson_title": "Fibre to Fabric",
+        "theory_short": "Where do clothes come from? They start as **fibres**, which can be natural (like cotton from plants, or wool/silk from animals) or synthetic (man-made, like nylon or polyester). These fibres are spun into **yarn**, and then the yarn is woven or knitted into **fabric**, which is finally stitched into the clothes we wear.",
+        "summary": "Clothes are made from fibres (natural or synthetic) spun into yarn, then woven or knitted into fabric.",
+        "animations_links": [],
+        "real_life_examples": {
+            "sources": [
+                "A cotton ball picked from a cotton plant.",
+                "Wool sheared from a sheep to make a sweater.",
+                "A silk saree made from threads obtained from silkworm cocoons.",
+                "A nylon rope used for climbing (synthetic material)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these is a natural fibre obtained from an animal?",
+                "options": [
+                    "Cotton",
+                    "Jute",
+                    "Nylon",
+                    "Wool"
+                ],
+                "answer": "Wool"
+            },
+            {
+                "question": "The process of making yarn from fibres is called:",
+                "options": [
+                    "Weaving",
+                    "Knitting",
+                    "Spinning",
+                    "Ginning"
+                ],
+                "answer": "Spinning"
+            },
+            {
+                "question": "Jute fibre is obtained from which part of the jute plant?",
+                "options": [
+                    "Leaf",
+                    "Root",
+                    "Stem",
+                    "Fruit"
+                ],
+                "answer": "Stem"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 4,
+        "lesson_title": "Sorting Materials into Groups",
+        "theory_short": "We see many objects around us made of different materials (plastic, wood, metal, glass). Objects are grouped based on their properties like **lustre** (shiny vs. dull), **texture** (smooth vs. rough), **solubility** (dissolves in water or not), and whether they are **transparent** (see through), **translucent** (blurry view), or **opaque** (cannot see through). Grouping makes it easier to find and use them.",
+        "summary": "Materials are grouped by properties like appearance, hardness, solubility, and transparency for convenience.",
+        "animations_links": [],
+        "real_life_examples": {
+            "properties": [
+                "A steel spoon is shiny (lustrous) while a wooden spoon is dull.",
+                "Oil floats on water (immiscible). Salt disappears in water (soluble).",
+                "A clear glass window is transparent. Frosted bathroom glass is translucent. A wooden door is opaque."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these materials is transparent?",
+                "options": [
+                    "Wood",
+                    "Cardboard",
+                    "Air",
+                    "Aluminium"
+                ],
+                "answer": "Air"
+            },
+            {
+                "question": "Which substance is insoluble in water?",
+                "options": [
+                    "Sugar",
+                    "Salt",
+                    "Sand",
+                    "Vinegar"
+                ],
+                "answer": "Sand"
+            },
+            {
+                "question": "Materials that have a shiny appearance are said to have:",
+                "options": [
+                    "Roughness",
+                    "Transparency",
+                    "Lustre",
+                    "Hardness"
+                ],
+                "answer": "Lustre"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 5,
+        "lesson_title": "Separation of Substances",
+        "theory_short": "Sometimes we need to separate useful substances from mixtures (like separating tea leaves from brewed tea, or stones from rice). Common methods include **handpicking** (large impurities), **threshing** (beating stalks to free grain), **winnowing** (using wind to separate lighter husks), **sieving** (using a mesh for different sizes), **sedimentation/decantation** (letting heavy stuff settle), and **filtration** (using a filter paper). **Evaporation** separates dissolved salt from water.",
+        "summary": "Various methods like handpicking, winnowing, filtration, and evaporation are used to separate components of a mixture based on their physical properties.",
+        "animations_links": [],
+        "real_life_examples": {
+            "methods_in_action": [
+                "A farmer using wind to separate grain from chaff (winnowing).",
+                "Using a kitchen sieve to separate flour from lumps (sieving).",
+                "Making salt from seawater by drying the water using sunlight (evaporation).",
+                "Separating muddy water: mud settles at the bottom (sedimentation)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "The method used to separate lighter husk particles from heavier grain is called:",
+                "options": [
+                    "Threshing",
+                    "Sieving",
+                    "Winnowing",
+                    "Handpicking"
+                ],
+                "answer": "Winnowing"
+            },
+            {
+                "question": "Which method is used to obtain salt from a salt solution?",
+                "options": [
+                    "Decantation",
+                    "Filtration",
+                    "Condensation",
+                    "Evaporation"
+                ],
+                "answer": "Evaporation"
+            },
+            {
+                "question": "Pebbles from rice are separated by which method?",
+                "options": [
+                    "Sedimentation",
+                    "Handpicking",
+                    "Sieving",
+                    "Filtration"
+                ],
+                "answer": "Handpicking"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 6,
+        "lesson_title": "Changes Around Us",
+        "theory_short": "The world is full of changes! Some changes are **reversible**, meaning you can get the original material back (like melting ice into water and refreezing it). Other changes are **irreversible**, permanent changes that create a new substance (like burning paper into ash or cooking an egg). Heating or cooling often causes these changes, sometimes changing the size, shape, or state of matter.",
+        "summary": "Changes around us are either reversible (can be undone, like melting) or irreversible (permanent, like cooking).",
+        "animations_links": [],
+        "real_life_examples": {
+            "change_types": [
+                "Melting of ice cream into liquid (reversible).",
+                "Curdling of milk into curd (irreversible).",
+                "Stretching a rubber band (reversible physical change).",
+                "Rusting of iron (irreversible chemical change)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these is an irreversible change?",
+                "options": [
+                    "Melting of wax",
+                    "Inflating a balloon",
+                    "Baking a cake",
+                    "Folding paper"
+                ],
+                "answer": "Baking a cake"
+            },
+            {
+                "question": "Which change is reversible?",
+                "options": [
+                    "Burning a candle",
+                    "Cooking food",
+                    "Growing a plant",
+                    "Dissolving sugar in water"
+                ],
+                "answer": "Dissolving sugar in water"
+            },
+            {
+                "question": "When a candle burns, the melting of wax is a __________ change, while burning of the wick is a __________ change.",
+                "options": [
+                    "Reversible, Irreversible",
+                    "Irreversible, Reversible",
+                    "Physical, Chemical",
+                    "Chemical, Physical"
+                ],
+                "answer": "Reversible, Irreversible"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 7,
+        "lesson_title": "Getting to Know Plants",
+        "theory_short": "Plants are amazing organisms with distinct parts: **roots** (anchor the plant and absorb water), **stem** (supports the plant and transports water/food), **leaves** (make food through photosynthesis), **flowers** (for reproduction), and **fruits** (contain seeds). Plants can be herbs (small and soft), shrubs (bushy with hard stems), or trees (tall and woody).",
+        "summary": "Plants have specialized parts (roots, stem, leaves, flowers) categorized into herbs, shrubs, and trees based on their structure and stem type.",
+        "animations_links": [],
+        "real_life_examples": {
+            "plant_parts_functions": [
+                "A carrot is an example of a modified root we eat.",
+                "Spinach leaves are where the plant makes its food.",
+                "A rose is a shrub; a mango tree is a tree; mint is a herb.",
+                "Observing the veins (venation) on different leaves."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which part of the plant absorbs water and minerals from the soil?",
+                "options": [
+                    "Stem",
+                    "Leaf",
+                    "Flower",
+                    "Root"
+                ],
+                "answer": "Root"
+            },
+            {
+                "question": "Plants with green and tender stems are called:",
+                "options": [
+                    "Trees",
+                    "Shrubs",
+                    "Herbs",
+                    "Creepers"
+                ],
+                "answer": "Herbs"
+            },
+            {
+                "question": "The process by which leaves prepare food for the plant is called:",
+                "options": [
+                    "Respiration",
+                    "Transpiration",
+                    "Photosynthesis",
+                    "Digestion"
+                ],
+                "answer": "Photosynthesis"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 8,
+        "lesson_title": "Body Movements",
+        "theory_short": "Our bodies move because of our **skeleton** (framework of bones). **Joints** are where two or more bones meet, allowing movement. We have different types: ball-and-socket (shoulder), hinge (elbow/knee), pivot (neck), and fixed joints (skull). **Muscles** work in pairs to pull bones and cause movement; they can only pull, not push. Animals move in diverse ways: birds fly, fish swim, snakes slither, and earthworms contract/expand.",
+        "summary": "Movement is enabled by the skeleton, various joints, and muscles working in pairs. Different animals use specialized structures for locomotion.",
+        "animations_links": [],
+        "real_life_examples": {
+            "joint_types": [
+                "Swinging your arm around in a circle (ball-and-socket joint in the shoulder).",
+                "Bending your knee or elbow (hinge joint).",
+                "Turning your head side-to-side (pivot joint in the neck).",
+                "Watching a bird use its strong chest muscles to flap wings."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which type of joint allows movement in only one direction?",
+                "options": [
+                    "Ball-and-socket joint",
+                    "Pivot joint",
+                    "Fixed joint",
+                    "Hinge joint"
+                ],
+                "answer": "Hinge joint"
+            },
+            {
+                "question": "The framework of bones in our body is called the:",
+                "options": [
+                    "Muscle system",
+                    "Skeletal system",
+                    "Nervous system",
+                    "Organ system"
+                ],
+                "answer": "Skeletal system"
+            },
+            {
+                "question": "Which animal moves by contracting and relaxing its body segments?",
+                "options": [
+                    "Fish",
+                    "Bird",
+                    "Snake",
+                    "Earthworm"
+                ],
+                "answer": "Earthworm"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 9,
+        "lesson_title": "The Living Organisms and Their Surroundings",
+        "theory_short": "Living things (organisms) live in a **habitat**—their specific home/surroundings (like a desert, forest, or ocean). Each habitat has **biotic components** (living things: plants, animals) and **abiotic components** (non-living things: rocks, soil, air, water, sunlight). Organisms develop **adaptations** (special features or habits) to survive best in their specific habitat, such as camels storing water for the desert.",
+        "summary": "Organisms live in habitats with both living (biotic) and non-living (abiotic) components and develop specific adaptations to survive there.",
+        "animations_links": [],
+        "real_life_examples": {
+            "adaptations": [
+                "A cactus plant has spines instead of leaves to save water in the desert.",
+                "Fish having streamlined bodies and gills to breathe underwater.",
+                "Polar bears having thick fur to survive in cold, snowy regions.",
+                "A pond as a habitat with frogs, fish, water plants (biotic) and water, rocks (abiotic)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these is an abiotic component of a habitat?",
+                "options": [
+                    "Plants",
+                    "Animals",
+                    "Fungi",
+                    "Soil"
+                ],
+                "answer": "Soil"
+            },
+            {
+                "question": "The specific place where an organism lives is called its:",
+                "options": [
+                    "Adaptation",
+                    "Biome",
+                    "Habitat",
+                    "Environment"
+                ],
+                "answer": "Habitat"
+            },
+            {
+                "question": "Which adaptation helps a fish live in water?",
+                "options": [
+                    "Wings",
+                    "Lungs",
+                    "Gills",
+                    "Legs"
+                ],
+                "answer": "Gills"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 10,
+        "lesson_title": "Motion and Measurement of Distances",
+        "theory_short": "Early humans used body parts (cubit, hand span) to measure distance, but these were inconsistent. Now we use standard units like the **metre** (m) for length. The standard international (SI) unit of length is the metre. We measure motion as a change in position over time. Motion can be **straight line** (rectilinear), **circular** (around a fixed point), **periodic** (repeats over time), or random (like a flying butterfly).",
+        "summary": "Standard units like the metre are used for consistent measurement. Motion is the change in position and can be rectilinear, circular, periodic, or random.",
+        "animations_links": [],
+        "real_life_examples": {
+            "motion_types": [
+                "A car moving on a straight highway (rectilinear motion).",
+                "Blades of a fan spinning (circular motion).",
+                "The pendulum of a clock swinging back and forth (periodic motion).",
+                "Measuring the length of a desk with a metre scale."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "The standard SI unit of length is the:",
+                "options": [
+                    "Centimetre",
+                    "Kilometre",
+                    "Foot",
+                    "Metre"
+                ],
+                "answer": "Metre"
+            },
+            {
+                "question": "Motion that repeats itself after a fixed interval of time is called:",
+                "options": [
+                    "Rectilinear motion",
+                    "Circular motion",
+                    "Periodic motion",
+                    "Random motion"
+                ],
+                "answer": "Periodic motion"
+            },
+            {
+                "question": "Which of these ancient methods of measurement was inconsistent?",
+                "options": [
+                    "Metre scale",
+                    "Ruler",
+                    "Cubit (hand length)",
+                    "Measuring tape"
+                ],
+                "answer": "Cubit (hand length)"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 11,
+        "lesson_title": "Light, Shadows and Reflections",
+        "theory_short": "We see the world because of **light**, which travels in a straight line. Objects that give off their own light are **luminous** (sun, bulb); others are non-luminous. When light hits an **opaque** object, a dark area forms behind it called a **shadow**. A **pinhole camera** proves that light travels in straight lines. **Reflection** is when light bounces off a shiny surface like a mirror, allowing us to see images.",
+        "summary": "Light travels in a straight line, creating shadows behind opaque objects. Shiny surfaces reflect light, forming images we see in mirrors.",
+        "animations_links": [],
+        "real_life_examples": {
+            "optics_in_action": [
+                "Your shadow changing length throughout the day.",
+                "Seeing your face in a mirror (reflection).",
+                "Sunlight streaming through a small gap in straight lines.",
+                "Using a torch: light beam is a straight path."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Objects that emit their own light are called:",
+                "options": [
+                    "Opaque objects",
+                    "Transparent objects",
+                    "Luminous objects",
+                    "Reflective objects"
+                ],
+                "answer": "Luminous objects"
+            },
+            {
+                "question": "The path of light is always:",
+                "options": [
+                    "Curved",
+                    "Zig-zag",
+                    "Circular",
+                    "A straight line"
+                ],
+                "answer": "A straight line"
+            },
+            {
+                "question": "A dark patch formed when an opaque object blocks the path of light is a:",
+                "options": [
+                    "Image",
+                    "Reflection",
+                    "Shadow",
+                    "Refraction"
+                ],
+                "answer": "Shadow"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 12,
+        "lesson_title": "Electricity and Circuits",
+        "theory_short": "We use **electricity** daily. An **electric circuit** is a complete path that electricity can flow through, typically containing a cell (power source), wires (conductors), a bulb, and a switch. **Conductors** (like metals) allow electricity to pass through; **insulators** (like plastic, wood) block it. A **switch** makes the circuit complete (ON) or breaks it (OFF).",
+        "summary": "An electric circuit needs a power source and complete path for current flow. Conductors allow flow; insulators block it. Switches control the circuit.",
+        "animations_links": [],
+        "real_life_examples": {
+            "circuits_conductors": [
+                "The plastic coating around an electric wire is an insulator protecting us from the metal conductor inside.",
+                "Flipping a light switch on and off at home.",
+                "Building a simple torch circuit using a battery cell and a bulb.",
+                "Water as a good conductor of electricity (safety warning)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which of these is a good conductor of electricity?",
+                "options": [
+                    "Rubber",
+                    "Wood",
+                    "Plastic",
+                    "Copper wire"
+                ],
+                "answer": "Copper wire"
+            },
+            {
+                "question": "A complete path for electricity to flow is called a:",
+                "options": [
+                    "Switch",
+                    "Insulator",
+                    "Circuit",
+                    "Terminal"
+                ],
+                "answer": "Circuit"
+            },
+            {
+                "question": "Which component is used to 'break' an electric circuit?",
+                "options": [
+                    "Wire",
+                    "Battery",
+                    "Bulb",
+                    "Switch"
+                ],
+                "answer": "Switch"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 13,
+        "lesson_title": "Fun with Magnets",
+        "theory_short": "**Magnets** attract certain materials like iron, cobalt, and nickel (**magnetic materials**). They have two **poles**: North (N) and South (S). The strongest magnetic force is at these poles. **Like poles repel** each other (N pushes N away), while **unlike poles attract** (N pulls S closer). A freely suspended magnet always points North-South, which is why they are used in **compasses** for direction.",
+        "summary": "Magnets attract magnetic materials, have North and South poles, exhibit attraction/repulsion laws, and are used in compasses for direction finding.",
+        "animations_links": [],
+        "real_life_examples": {
+            "magnetism_around_us": [
+                "A refrigerator door seal uses magnets to stay shut.",
+                "Using a compass to find direction while hiking.",
+                "A scrapyard crane using an electromagnet to lift heavy iron scrap.",
+                "Two bar magnets pushing each other away (repulsion) or sticking together (attraction)."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which material is not attracted by a magnet?",
+                "options": [
+                    "Iron",
+                    "Cobalt",
+                    "Nickel",
+                    "Plastic"
+                ],
+                "answer": "Plastic"
+            },
+            {
+                "question": "What happens when two North poles of magnets are brought close together?",
+                "options": [
+                    "They attract",
+                    "They repel",
+                    "They stick together weakly",
+                    "Nothing happens"
+                ],
+                "answer": "They repel"
+            },
+            {
+                "question": "A freely suspended magnet always rests in which direction?",
+                "options": [
+                    "East-West",
+                    "North-South",
+                    "Up-Down",
+                    "Any direction"
+                ],
+                "answer": "North-South"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 14,
+        "lesson_title": "Water",
+        "theory_short": "Water is essential for all life, covering about two-thirds of the Earth, mostly in oceans (salty). We need freshwater from rivers, ponds, and groundwater. The **water cycle** describes how water moves continuously: **evaporation** (liquid to gas by sun's heat), **condensation** (gas to liquid forming clouds), and **precipitation** (rain, snow, or sleet falling back down). We must conserve water as freshwater is limited.",
+        "summary": "Water cycles through evaporation, condensation, and precipitation. Conservation of limited freshwater is crucial for life.",
+        "animations_links": [
+            "www.youtube.com"
+        ],
+        "real_life_examples": {
+            "water_cycle_examples": [
+                "Puddles drying up after rain (evaporation).",
+                "Water droplets forming on the outside of a cold glass (condensation).",
+                "Rain falling from the sky (precipitation).",
+                "Rainwater harvesting systems on rooftops to store water."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "The process by which water changes into water vapour is called:",
+                "options": [
+                    "Condensation",
+                    "Precipitation",
+                    "Evaporation",
+                    "Filtration"
+                ],
+                "answer": "Evaporation"
+            },
+            {
+                "question": "Which of these contains salty water?",
+                "options": [
+                    "River",
+                    "Pond",
+                    "Groundwater",
+                    "Ocean"
+                ],
+                "answer": "Ocean"
+            },
+            {
+                "question": "Formation of clouds is due to:",
+                "options": [
+                    "Evaporation",
+                    "Condensation",
+                    "Transpiration",
+                    "Sedimentation"
+                ],
+                "answer": "Condensation"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 15,
+        "lesson_title": "Air Around Us",
+        "theory_short": "Air is everywhere! It's a mixture of several gases, mainly **nitrogen** (~78%) and **oxygen** (~21%), with small amounts of carbon dioxide, water vapour, and other gases. Living organisms need oxygen to breathe (**respiration**). Plants use carbon dioxide for **photosynthesis**. Air takes up space, has mass, and is needed for burning things (**combustion**). Wind is moving air.",
+        "summary": "Air is a vital mixture of gases (mostly nitrogen and oxygen). It is necessary for respiration, combustion, and the existence of life on Earth.",
+        "animations_links": [],
+        "real_life_examples": {
+            "air_properties": [
+                "A pinwheel spinning when you blow on it (showing wind/moving air).",
+                "A candle needing a constant supply of air (oxygen) to stay lit.",
+                "Breathing in oxygen right now (respiration).",
+                "A balloon inflating shows air takes up space."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "Which gas in the air is essential for respiration by living organisms?",
+                "options": [
+                    "Nitrogen",
+                    "Carbon dioxide",
+                    "Oxygen",
+                    "Argon"
+                ],
+                "answer": "Oxygen"
+            },
+            {
+                "question": "Which gas do plants primarily use for photosynthesis?",
+                "options": [
+                    "Oxygen",
+                    "Nitrogen",
+                    "Carbon dioxide",
+                    "Helium"
+                ],
+                "answer": "Carbon dioxide"
+            },
+            {
+                "question": "Approximately what percentage of air is nitrogen?",
+                "options": [
+                    "21%",
+                    "50%",
+                    "78%",
+                    "90%"
+                ],
+                "answer": "78%"
+            }
+        ]
+    },
+    {
+        "subject": "Science",
+        "class_level": 6,
+        "chapter_number": 16,
+        "lesson_title": "Garbage In, Garbage Out",
+        "theory_short": "We generate a lot of waste (**garbage**), which needs proper disposal. Some waste is **biodegradable** (can rot away naturally, like food scraps and plant matter) and can be turned into useful compost by earthworms (**vermicomposting**). Non-biodegradable waste (like most plastics) does not rot and harms the environment. The key is to reduce waste (Reduce), use items again (Reuse), and turn old materials into new ones (Recycle). This is the **3R principle**.",
+        "summary": "Proper garbage disposal involves separating biodegradable (compostable) from non-biodegradable waste. The 3R principle (Reduce, Reuse, Recycle) minimizes environmental harm.",
+        "animations_links": [],
+        "real_life_examples": {
+            "waste_management": [
+                "Separating wet waste (kitchen scraps) and dry waste (plastic, paper) at home.",
+                "A compost pit in a garden turning dead leaves and vegetable peels into nutrient-rich soil.",
+                "Choosing reusable cloth bags instead of single-use plastic bags.",
+                "Plastic bottles being collected and sent to a factory for recycling."
+            ]
+        },
+        "practice_questions_mcqs": [
+            {
+                "question": "The process of making compost using red worms (earthworms) is called:",
+                "options": [
+                    "Recycling",
+                    "Landfilling",
+                    "Vermicomposting",
+                    "Incineration"
+                ],
+                "answer": "Vermicomposting"
+            },
+            {
+                "question": "Which of these materials is non-biodegradable?",
+                "options": [
+                    "Vegetable peels",
+                    "Paper",
+                    "Glass bottle",
+                    "Cotton cloth"
+                ],
+                "answer": "Glass bottle"
+            },
+            {
+                "question": "The principle 'Reduce, Reuse, Recycle' helps in:",
+                "options": [
+                    "Increasing waste production",
+                    "Managing garbage effectively",
+                    "Wasting resources",
+                    "Polluting the air"
+                ],
+                "answer": "Managing garbage effectively"
+            }
+        ]
+    }
+]
