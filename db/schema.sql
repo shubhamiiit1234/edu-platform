@@ -65,3 +65,47 @@ CREATE TABLE user_badges (
   earned_at TIMESTAMP DEFAULT NOW(),
   PRIMARY KEY (user_id, badge_id)
 );
+
+
+CREATE TABLE quizzes (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  lesson_id INT REFERENCES lessons(id),
+  total_marks INT DEFAULT 0,
+  time_limit INT, -- in seconds (e.g., 600 = 10 mins)
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE quiz_questions (
+  id SERIAL PRIMARY KEY,
+  quiz_id INT REFERENCES quizzes(id) ON DELETE CASCADE,
+  question_id INT REFERENCES practice_questions(id) ON DELETE CASCADE
+);
+
+CREATE TABLE quiz_attempts (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id),
+  quiz_id INT REFERENCES quizzes(id),
+  score INT DEFAULT 0,
+  started_at TIMESTAMP DEFAULT NOW(),
+  finished_at TIMESTAMP
+);
+
+CREATE TABLE quiz_answers (
+  id SERIAL PRIMARY KEY,
+  attempt_id INT REFERENCES quiz_attempts(id) ON DELETE CASCADE,
+  question_id INT REFERENCES practice_questions(id),
+  selected_option INT,
+  correct_option INT,
+  is_correct BOOLEAN,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE user_progress (
+  user_id INT REFERENCES users(id) ON DELETE CASCADE,
+  lesson_id INT REFERENCES lessons(id) ON DELETE CASCADE,
+  completed BOOLEAN DEFAULT FALSE,
+  completed_at TIMESTAMP,
+  PRIMARY KEY (user_id, lesson_id)
+);

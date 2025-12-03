@@ -33,4 +33,10 @@ func RegisterRoutes(r chi.Router) {
 	// Aptitude
 	r.Get("/aptitude/questions", handlers.ListAptitudeQuestions)
 	r.Post("/aptitude/submit", handlers.SubmitAptitude)
+
+	r.Get("/quizzes", handlers.ListQuizzes)
+	r.Get("/quizzes/{quizId}/questions", handlers.ListQuizQuestions)
+	r.Post("/quizzes/{quizId}/start", handlers.StartQuizAttempt)
+	r.Post("/quizzes/{quizId}/submit", handlers.SubmitQuiz)
+
 }
