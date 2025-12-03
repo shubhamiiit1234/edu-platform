@@ -67,10 +67,10 @@ The system will support three types of users:
 
     3.3 Lesson Navigation
         - Student can browse lessons by:
-        - Class
-        - Subject
-        - Unit
-        - Difficulty
+            - Class
+            - Subject
+            - Unit
+            - Difficulty
 
 
 4. Practice Questions
@@ -149,7 +149,7 @@ A result entry is stored in aptitude_results.
 
     7.3 Competition Mode
         - Timed quizzes
-        - Instant scoring
+        - Instant scoring / After Fixed time (eg. Result announced after 2 hours)
 
 
 8. Animations and Interactive Learning
