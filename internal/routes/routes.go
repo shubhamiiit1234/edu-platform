@@ -39,4 +39,6 @@ func RegisterRoutes(r chi.Router) {
 	r.Post("/quizzes/{quizId}/start", handlers.StartQuizAttempt)
 	r.Post("/quizzes/{quizId}/submit", handlers.SubmitQuiz)
 
+	r.Get("/quiz/attempts/{attemptId}/review", handlers.GetQuizReview)
+
 }
