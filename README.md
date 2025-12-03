@@ -1,38 +1,69 @@
-# Go Backend Starter (Gin)
+Backend (Go + Chi + PostgreSQL)
 
-This is a minimal Go backend starter project for your education platform MVP.
-It uses in-memory storage for quick prototyping and example handlers for:
-- Signup / Login (mocked)
-- Lessons (list + detail)
-- Aptitude questions (list)
-- Aptitude submission (simple scoring + recommendation)
+This backend powers the Learning & Aptitude Platform.
+It is built using Go (with Chi router), PostgreSQL as the database, and comes with Docker & Docker Compose support.
 
-**Notes**
-- This is intentionally simple to help you start quickly.
-- Replace in-memory stores with PostgreSQL and proper auth (JWT / OAuth) for production.
-- See `db/schema.sql` for suggested database schema.
+**1. The backend provides APIs for:**
+   1. User Signup & Login
+   2. Subjects
+   3. Lessons
+   4. Practice Questions
+   5. Aptitude Questions
+   6. Aptitude Test Submission & Recommendation
 
-## How to run (locally)
-1. Install Go (>=1.20 recommended).
-2. From the project root:
-   ```
-   go mod tidy
-   go run ./cmd/server
-   ```
-3. Server will run on `:8080`
+**2. Requirements:**
+   1. Go 1.24+
+   2. PostgreSQL 14+
 
-## Endpoints
-- `GET /health` → health check
-- `POST /signup` → create user (mock)
-- `POST /login` → login (mock)
-- `GET /lessons` → list lessons
-- `GET /lessons/:id` → lesson detail
-- `GET /aptitude/questions` → aptitude questions
-- `POST /aptitude/submit` → submit answers, get score & recommendation
+**3. Database Tables:**
+   1. Users
+   2. Subjects
+   3. Lessons
+   4. Practice Questions
+   5. Aptitude Questions
+   6. Aptitude Results
+   7. Badges
+   8. User Badges
+  
+**4. Running/Rebuilding Backend With Docker Compose:**
+   docker compose up --build
 
-## Next steps
-- Add PostgreSQL integration (use `db/schema.sql`)
-- Add JWT-based auth and middleware
-- Add persistence for users, lessons, results
-- Add tests
-# edu-platform
+**5. API Testing:**
+   1. Health check:
+      GET /health
+   
+   2. Signup:
+      POST /signup
+      {
+        "name": "Shubham",
+        "email": "test@test.com",
+        "password": "123456",
+        "class": 10
+      }
+   
+   3. Login:
+      POST /login
+      {
+        "email": "test@test.com",
+        "password": "123456"
+      }
+   
+   4. Subjects:
+      GET /subjects
+      GET /subjects?class=6
+   
+   5. Lessons:
+      GET /lessons
+      GET /lessons?subject_id=2
+      GET /lessons/5
+   
+   6. Aptitude test:
+      GET /aptitude/questions
+      POST /aptitude/submit
+
+**6. Upcoming Features:**
+   1. JWT Authentication
+   2. Reward system
+   3. Daily challenges
+   4. Engineering–Medical–Arts recommendation engine
+   5. Admin dashboard for adding lessons/questions
